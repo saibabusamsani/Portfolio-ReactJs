@@ -131,7 +131,7 @@ export const NavBar = () => {
                   />
                 </a>
               </div>
-              <HashLink to="#connect">
+              <HashLink to="#connect" onClick={()=>toggleRef.current.click()}>
                 <button className="text-nowrap">
                   <span>Let’s Connect</span>
                 </button>

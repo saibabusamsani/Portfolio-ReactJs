@@ -96,6 +96,15 @@ export default function Projects() {
             <Typography variant='h3'>Projects</Typography>
             <Box sx={{display:"flex",columnGap:"3vw",mt:"10px",
                 overflowX:"scroll",
+                "&::-webkit-scrollbar": {
+                    height: "3px", // Adjusts the scrollbar height for horizontal scrolling
+                  },
+                  "&::-webkit-scrollbar-thumb": {
+                    backgroundColor: "orange", // Custom scrollbar color
+                    borderRadius: "10px",
+                  },
+                 
+                  pb:"10px"
             
             }}>
                 {
@@ -138,7 +147,16 @@ export default function Projects() {
                 display:'flex',
                 flexDirection:"column",
                 rowGap:"15px",
-                overflowY:"scroll"
+                overflowY:"scroll",
+                pr:"10px",
+              
+                "&::-webkit-scrollbar": {
+                width: "4px",
+                },
+                "&::-webkit-scrollbar-thumb": {
+                backgroundColor: "orange",
+                borderRadius: "10px",
+                },
             }}>
 
                 <Typography sx={{fontSize:"20px"}}>{project.role}</Typography>
