@@ -51,7 +51,7 @@ export const Skills = () => {
     { name: "My SQL", img: mysql, shadowClass: "shadow-color-mysql" },
     { name: "Mongo DB", img: mongodb, shadowClass: "shadow-color-mdb" },
     { name: "Node JS", img: nodejs, shadowClass: "shadow-color-njs" },
-    { name: "Adobe Illustrator", img: illustrator, shadowClass: "shadow-color-adi" },
+    
   ];
 
   return (

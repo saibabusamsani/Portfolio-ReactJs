@@ -21,7 +21,7 @@ function App() {
       <NavBar />
       <Banner />
       <Skills />
-     
+      
       <Contact />
       <Footer />
       <TopButton />
