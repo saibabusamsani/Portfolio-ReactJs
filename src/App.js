@@ -9,6 +9,8 @@ import { Footer } from "./components/Footer";
 import { TopButton } from "./components/TopButton";
 import { Toaster, toast } from "sonner";
 import { useEffect } from "react";
+import Projects from "./components/Projects";
+
 
 function App() {
   useEffect(() => {
@@ -21,7 +23,7 @@ function App() {
       <NavBar />
       <Banner />
       <Skills />
-      
+      <Projects/>
       <Contact />
       <Footer />
       <TopButton />

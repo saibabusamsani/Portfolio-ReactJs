@@ -1,17 +1,19 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
-import logo from "../assets/img/logo.png";
+import logo from "../assets/myPic/profile.jpg";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+
+  const toggleRef = useRef(null); // Reference to the Navbar.Toggle
 
   useEffect(() => {
     const onScroll = () => {
@@ -29,6 +31,9 @@ export const NavBar = () => {
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
+    if (toggleRef.current) {
+      toggleRef.current.click(); // This simulates a click on the Navbar.Toggle to close the menu
+    }
   };
 
   return (
@@ -54,11 +59,11 @@ export const NavBar = () => {
               <h1>portfolio</h1>
             </a>
           </div>
-          <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" ref={toggleRef}>
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
-            <div className="d-flex gap-4 justify-content-around m-auto">
+            <div className="d-flex gap-4 justify-content-around   toggle-bar m-auto">
               <Nav.Link
                 href="#home"
                 className={

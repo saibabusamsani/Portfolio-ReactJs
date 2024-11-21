@@ -1,15 +1,15 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import html from "../assets/img/Skills/html.svg";
+import java from "../assets/img/Skills/java.svg";
 import css from "../assets/img/Skills/css.svg";
 import js from "../assets/img/Skills/js.svg";
-import nextjs from "../assets/img/Skills/nextjs.png";
+
 import react from "../assets/img/Skills/react.svg";
-import mongodb from "../assets/img/Skills/mongodb.svg";
+
 import mysql from "../assets/img/Skills/mysql.svg";
-import nodejs from "../assets/img/Skills/nodejs.svg";
-import tailwindcss from "../assets/img/Skills/tailwindcss.svg";
-import illustrator from "../assets/img/Skills/illustrator.svg";
+
+
 import colorSharp from "../assets/img/color-sharp.png";
 import { useState } from "react";
 
@@ -29,7 +29,7 @@ export const Skills = () => {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 4,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -46,10 +46,9 @@ export const Skills = () => {
     { name: "CSS3", img: css, shadowClass: "shadow-color-css" },
     { name: "JavaScript", img: js, shadowClass: "shadow-color-js" },
     { name: "React JS", img: react, shadowClass: "shadow-color-reactjs" },
-    { name: "Next JS", img: nextjs, shadowClass: "shadow-color-nextjs" },
-    { name: "Tailwind CSS", img: tailwindcss, shadowClass: "shadow-color-tcs" },
     { name: "My SQL", img: mysql, shadowClass: "shadow-color-mysql" },
-    { name: "Mongo DB", img: mongodb, shadowClass: "shadow-color-mdb" },
+    { name: "Java", img: java, shadowClass: "shadow-color-mysql" },
+    
     
     
   ];
@@ -88,9 +87,9 @@ export const Skills = () => {
                   return (
                     <div className="item" key={index}>
                       <LazyLoad width={150} height={150}>
-                        <img src={skill.img} alt="skills" className={skillImageClass} style={{ width: "150px", height: "150px" }} />
+                        <img src={skill.img} alt="skills" className={skillImageClass} style={{ width: "150px", height: "150px" ,transform:"translateX(96px)"}} />
                       </LazyLoad>
-                      <h5>{skill.name}</h5>
+                      <h5 style={{marginTop:"25px"}}>{skill.name}</h5>
                     </div>
                   );
                 })}

@@ -4,6 +4,7 @@
   
   font-weight: 700;
   font-display: swap;
+  color: rgb(130, 236, 238);
 }
 
 @font-face {
@@ -515,7 +516,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .skill-slider {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   position: relative;
 }
@@ -925,4 +926,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .custom-navbar.scrolled {
   background-color: rgba(255, 255, 255, 0.7);
   /* Adjust the alpha (transparency) value as needed */
+}
+
+@media (max-width:500px) {
+.toggle-bar,.navbar-text{
+  margin-top: 20px;
+  transform: translatey(20px);
+  /* background-color: red; */
+}
 }
