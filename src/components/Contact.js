@@ -8,6 +8,7 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 
 import LazyLoad from "react-lazy-load";
 import { toast } from "sonner";
+import { Box } from "@mui/material";
 
 export const Contact = () => {
   const form = useRef();
@@ -55,11 +56,14 @@ export const Contact = () => {
         <Row className="align-items-center">
           <Col size={12} md={6}>
             <AnimationOnScroll animateIn="animate__animated animate__zoomIn">
-              <LazyLoad width={500} height={400} offsetVertical={300}>
-                <img
+              <LazyLoad 
+               offsetVertical={300}
+              >
+                <Box
+                component="img"
                   src={contactImg}
                   alt="Contact Us"
-                  style={{ width: "500px", height: "400px" }}
+                  style={{ width: {xs:"200px",sm:"600px"}, height: {xs:"200px",sm:"600px", objectFit: 'cover',} }}
                 />
               </LazyLoad>
             </AnimationOnScroll>

@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
 import Typed from "typed.js"; // Import Typed.js library
 import { BrowserRouter as Router } from "react-router-dom";
+import { Box } from "@mui/material";
 
 export const Banner = () => {
   // Create a ref for the text element that you want to animate
@@ -48,7 +49,11 @@ export const Banner = () => {
               </p>
             </Col>
             <Col xs={12} md={6} xl={5}>
-              <img src={headerImg} alt="Header" style={{ width: "682px", height: "614px" }} />
+            <Box component="img"
+              src={headerImg} alt="Header" sx={{ width:{ xm:"200px",sm:"682px"}, height: {xs:"350px",sm:"614px"} }}
+            />
+            
+              
             </Col>
           </Row>
         </Container>
