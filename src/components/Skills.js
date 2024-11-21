@@ -50,7 +50,7 @@ export const Skills = () => {
     { name: "Tailwind CSS", img: tailwindcss, shadowClass: "shadow-color-tcs" },
     { name: "My SQL", img: mysql, shadowClass: "shadow-color-mysql" },
     { name: "Mongo DB", img: mongodb, shadowClass: "shadow-color-mdb" },
-    { name: "Node JS", img: nodejs, shadowClass: "shadow-color-njs" },
+    
     
   ];
 
